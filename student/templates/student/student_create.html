@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Add Student{% endblock %}
+
+{% block content %}
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="追加" class="btn btn-info btn-sm">
+    </form>
+</body>
+{% endblock %}

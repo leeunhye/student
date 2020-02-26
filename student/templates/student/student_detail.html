@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Student Detail{% endblock %}
+
+{% block content %}
+<div class="btn-group">
+    <a href="#" class = "btn btn-info">情報修正</a>
+</div>
+<p></p>
+<h3>学生情報</h3>
+<table class = "table">
+    <thead>
+        <tr>
+            <th scope="col">姓名</th>
+            <th scope="col">ふりがな</th>
+            <th scope="col">生年月日</th>
+            <th scope="col">性別</th>
+            <th scope="col">現住所</th>
+            <th scope="col">経歴</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>{{object.family_name}}{{object.given_name}}</td>
+                <td>{{object.family_name_huri}}{{object.given_name_huri}}</td>
+                <td>{{object.birth}}</td>
+                <td>{{object.gender}}</td>
+                <td>{{object.address}}</td>
+                <td>{{object.career}}</td>
+            </tr>
+    </tbody>
+</table>
+<p></p>
+<h3>保護者情報</h3>
+<table class = "table">
+    <thead>
+        <tr>
+            <th scope="col">姓名</th>
+            <th scope="col">ふりがな</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>{{object.family_name}}{{object.given_name}}</td>
+                <td>{{object.family_name_huri}}{{object.given_name_huri}}</td>
+            </tr>
+    </tbody>
+</table>
+
+{% endblock %}

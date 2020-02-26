@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}情報削除{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="alert alert-danger">{{object}}の情報を削除しますか。</div>
+    <input type="submit" value="Delete" class="btn btn-danger">
+</form>
+
+{% endblock %}
